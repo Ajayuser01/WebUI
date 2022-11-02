@@ -1,0 +1,24 @@
+<html>
+<head>
+<title>Untitled Document</title>
+</head>
+<script>
+function PrintStars() {	
+
+    
+    for(i=0;i<=10;i++)
+   
+        {
+            document.getElementById("TableArea").innerHTML=i + document.getElementById("etext").value;
+            document.write = i;
+        }
+    
+}
+</script>
+
+<body>
+Enter a Number: <input id="etext" type="text" placeholder="Enter a number here"/>
+<p id="TableArea"></p>
+<input type="button" Value="Print" onclick="PrintStars();"/>
+</body>
+</html>

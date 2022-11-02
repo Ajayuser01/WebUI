@@ -1,0 +1,23 @@
+body {
+  background-image: url("Assets/back_09.jpg");
+  /* background-color: darkblue; */
+  background-size: cover;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+li {
+  display: inline;
+  font-size: 25px;
+  padding: 10px;
+}
+a {
+  color: white;
+  text-decoration: solid;
+}
+li :hover {
+  color: rgb(248, 59, 11);
+  background-color: white;
+  border-radius: 8px;
+}

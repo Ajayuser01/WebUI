@@ -1,0 +1,23 @@
+.container {
+  width: 360px;
+  margin: auto;
+  border: 10px black;
+}
+
+.header {
+  background-color: orange;
+}
+h2 {
+  background-color: orange;
+}
+body {
+  background-color: white;
+}
+
+.main {
+  background-color: blue;
+}
+
+.footer {
+  background-color: orange;
+}

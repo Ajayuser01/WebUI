@@ -1,0 +1,29 @@
+body {
+  background-color: white;
+}
+.cover {
+  background-image: url(https://removal.ai/wp-content/uploads/2021/09/black-background-08-vecteezy.png);
+  text-align: center;
+  width: 382px;
+  margin: auto;
+  margin-top: 100px;
+  padding: 100px;
+  border-radius: 10px;
+  color: white;
+  font-family: "Brush Script MT", cursive;
+}
+#hd1 {
+  font-size: 36px;
+}
+.hd2 {
+  font-size: 22px;
+}
+#signup {
+  background-color: blue;
+}
+#signin {
+  background-color: green;
+}
+#reset {
+  background-color: red;
+}

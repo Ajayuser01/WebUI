@@ -1,0 +1,16 @@
+body {
+  background-color: aquamarine;
+}
+p {
+  font-size: 25px;
+}
+
+input {
+  font-size: 23px;
+  border-radius: 5px;
+}
+
+button {
+  font-size: 23px;
+  margin: 5px;
+}
