@@ -1,4 +1,25 @@
 
 body{
-    background-color: aqua;
+    background-color: rgb(152, 231, 156);
+}
+
+#input {
+    margin-left: 35%;
+    margin-right: 35%;
+    background-color: rgb(94, 192, 70);
+    border-radius: 4px;
+    padding: 5px;
+    align-content: center;
+}
+
+#input input{
+    border-radius: 3px;
+    /* margin: 5px; */
+    border: 2px solid rgb(255, 91, 187);
+}
+
+#Submit{
+   border: 2px solid rgb(255, 91, 187);
+   padding: 4px;
+   border-radius: 4px;
 }
