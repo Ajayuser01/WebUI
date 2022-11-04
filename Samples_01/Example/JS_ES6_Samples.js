@@ -7,7 +7,7 @@ function add(c,b,...a){  //spread ex
 console.log(c+val+b)
 }
 
-// add(10,5,2,2,1)
+ add(10,5,2,2,1)
 
 //--------------------------------------------------------
 
@@ -22,7 +22,7 @@ arr=[...arr,b];     //with spread operator
 console.log(arr)
 
 }
-// sp()
+sp()
 
 
 //-----------------------------------------------------------
@@ -37,7 +37,7 @@ for (let i= 0; i < persons.length; i++) {
 
 console.log(print)
 }
-// template()
+template()
 
 //------------------------------------------------
 //for in
@@ -46,3 +46,35 @@ names=["Anbu","bala","guru","jeeva","anand"]
 for (let a in names) {
  console.log(names[a])
 }
+
+names=["Anbu","bala","guru","jeeva","anand"]
+for (let a in names) {
+ console.log(names[a])
+}
+//----------------------------------------------------------
+let result;
+async function api(){
+  let val=await fetch('https://jsonplaceholder.typicode.com/users')
+  result=await val.json()
+    console.log(val);
+  console.log(result);
+}
+api()
+
+//--------------------------------------------------------------
+
+a=2;
+a == 1? console.log('true') : console.log('false')
+//-------------------------------------------------------------
+
+function add(a,b){
+  function addition(a,b){
+    return a+b;
+  }
+  return addition
+}
+res=add()
+console.log(res(5,6))
+
+//-----------------------------------------------------------
+
