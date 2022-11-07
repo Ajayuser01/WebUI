@@ -1,0 +1,51 @@
+body{
+    margin: 0%;
+    padding: 0%;
+}
+#table-area{
+    background-color: aqua;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.tbl{
+    border: 2px solid black;
+    width: 100%;
+  
+}
+.tbl th,td{
+    border: 2px  solid black;
+    text-align: center;
+}
+
+#controls{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px; 
+}
+
+button{
+    width: 5em;
+    height: 2em;
+}
+#get{
+    background-color: rgb(53, 241, 53);
+    border: 2px solid rgb(53, 241, 53);
+    color: black;
+    border-radius: 8px;
+}
+
+#post{
+    background-color: rgb(255, 252, 51);
+    border: 2px solid rgb(255, 252, 51);
+    color: black;
+    border-radius: 8px;
+}
+
+#delete{
+    background-color: rgb(253, 36, 36);
+    border: 2px solid  rgb(253, 36, 36);
+    color: black;
+    border-radius: 8px;
+}

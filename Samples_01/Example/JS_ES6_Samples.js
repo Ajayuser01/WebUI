@@ -1,4 +1,4 @@
-function add(c,b,...a){  //spread ex
+/* function add(c,b,...a){  //spread ex
     let val=0;
     for (let i = 0; i< a.length; i++) {
       val += a[i];
@@ -54,7 +54,7 @@ for (let a in names) {
 //----------------------------------------------------------
 let result;
 async function api(){
-  let val=await fetch('https://jsonplaceholder.typicode.com/users')
+  let val=await fetch('http://localhost:2022/arithms/students')
   result=await val.json()
     console.log(val);
   console.log(result);
@@ -78,3 +78,29 @@ console.log(res(5,6))
 
 //-----------------------------------------------------------
 
+const perrson ={
+  fn:"john",
+  ln:"doe",
+  fullname:function(){
+    return this.fn+" "+this.ln;
+  }
+}
+
+const member = {
+  fn:"hedge",
+  ln:"nilsen"
+}
+
+let fullname=perrson.fullname .bind(member)
+console.log(fullname())
+ */
+//-------------------------------------
+
+async function fetchText() {
+  let response = await fetch('note.txt');
+  let data = await response.text();
+  console.log("text:"+data);
+}
+fetchText()
+
+setInterval(()=>{console.log("hello")},10)

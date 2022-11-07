@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="controls">
+      <button id="get" onclick="getAll()">GET</button>
+      <button id="post" onclick="post()">POST</button>
+      <button id="delete" onclick="deleteReq()">DELETE</button>
+    </div>
+    <br />
+    <div id="table-area">
+      <table class="tbl">
+        <thead>
+            <th><input type="checkbox" id="checkbox" checked /></th>
+            <th>id</th>
+            <th>Name</th>
+            <th>Standard</th>
+            <th>Section</th>
+            <th>Mobile</th>
+            <th>District</th>
+            <th>Pincode</th>
+          </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+      </table>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -4,28 +4,53 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-       <link rel="stylesheet" href="Sample_crud.css" />
-    <title>Document</title>
+    <link rel="stylesheet" href="Sample_crud.css" />
+    <title>CRUD localStorage</title>
   </head>
   <body>
-    <div id="input">
-      <label for="id">ID:</label><br />
-      <input type="text" id="id" name="id" /><br />
-      <label for="name">NAME:</label><br />
-      <input type="text" id="name" name="name" /><br />
-      <label for="age">AGE:</label><br />
-      <input type="text" id="age" name="age" /><br />
-      <label for="email">EMAIL:</label><br />
-      <input type="text" id="email" name="email" /><br />
-      <label for="date">DATE:</label><br />
-      <input type="date" id="date" name="date" /><br />
-      <label for="gender">GENDER:</label><br />
-      <label for="male">Male</label>
-      <input type="radio" id="gender" name="gender" value="male"/><br />
-      <label for="female">Female</label>
-      <input type="radio" id="gender" name="gender" value="female" /><br />
-      <button id="Submit" onclick="createData()">Submit</button>
-      <script src="Sample_crud.js"></script>
-    </div>
+    <form>
+      <div id="input">
+        <label for="id">ID:</label><br />
+        <input type="text" id="id" name="id" /><br />
+        <label for="name">NAME:</label><br />
+        <input type="text" id="name" name="name" /><br />
+        <label for="age">AGE:</label><br />
+        <input type="text" id="age" name="age" /><br />
+        <label for="email">EMAIL:</label><br />
+        <input type="email" id="email" name="email" /><br />
+        <label for="date">DATE:</label><br />
+        <input type="date" id="date" name="date" /><br /><br />
+        <label for="gender">GENDER:</label><br />
+        <input type="radio" id="gender" name="gender" value="male" />
+        <label for="male">Male</label><br />
+        <input type="radio" id="gender" name="gender" value="female" />
+        <label for="female">Female</label><br />
+        <button id="Submit" onclick="getDataUI()">Submit</button><br />
+      </div>
+      <div>
+        <table class="op">
+          <thead>
+            <th>
+              <input type="checkbox" id="checkbox" checked>
+          </th>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Email</th>
+            <th>Date</th>
+            <th>Gender</th>
+          </thead>
+          <tbody id="table-body"></tbody>
+        </table>
+        <div id="btn-ctrl"><br>
+          <button class="button-1" onclick="loadTable()">Update</button>
+          <button class="button-2">Save</button>
+          <button class="button-5" onclick="loadTable()">Show All</button>
+          <button class="button-3" onclick="checkDelete()">Delete</button>
+          <button class="button-4" onclick="clean()">Delete All</button>
+        </div>
+      </div>
+    </form>
+    <script src="Sample_crud.js"></script>
   </body>
 </html>

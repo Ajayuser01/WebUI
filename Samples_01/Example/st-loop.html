@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<body>
+   <h3>Pause and play a loop using event Listeners</h3>
+   <p>Click on below buttons to pause and play the counter</p>
+   <button id="start">Play</button>
+   <button id="stop">Pause</button>
+   <div>
+   <p id="sec">0</p>
+   </div>
+   <script>
+      document.getElementById("start")
+         .setAttribute("disabled", "true")
+      var go = 0;
+      function waitforme(ms) {
+         return new Promise(resolve => {
+            setTimeout(() => { resolve('') }, ms);
+         })
+      }
+      function eventt() {
+         return new Promise(resolve => {
+            let playbuttonclick = function () {
+               document.getElementById("stop")
+                  .removeAttribute("disabled")
+
+               document.getElementById("start")
+                  .setAttribute("disabled", "true")
+
+               document.getElementById("start")
+                  .removeEventListener("click", playbuttonclick);
+               go = 0;
+
+               resolve("resolved");
+            }
+            document.getElementById("start")
+               .addEventListener("click", playbuttonclick)
+            })
+         }
+         document.getElementById("stop")
+            .addEventListener("click", function () {
+            go = 1;
+            document.getElementById("stop")
+               .setAttribute("disabled", "true")
+            document.getElementById("start")
+               .removeAttribute("disabled")
+            })
+            async function calculate() {
+               for (let a = 0;a<10000;a++) {
+               document.getElementById("sec").innerHTML = a ;
+               await waitforme(1000);
+               if (go == 1) await eventt();
+            }
+         }
+      calculate();
+   </script>
+</body>
+</html>
