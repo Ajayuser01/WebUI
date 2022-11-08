@@ -1,3 +1,6 @@
+// let clk=document.querySelector('get');
+// clk.addEventListener('click',getAll())
+
 async function getAll() {
   let val = await fetch("http://localhost:2022/arithms/students");
   result = await val.json();
@@ -36,13 +39,13 @@ async function post() {
   let url = "http://localhost:2022/arithms/students";
   let data = {
     address: {
-      district: "Thanjai",
-      pincode: 6762436,
+      district: document.getElementById('district').value,
+      pincode: document.getElementById('pin').value,
     },
-    mobile: "99947553",
-    name: "kala",
-    section: "G",
-    standard: "11",
+    mobile: document.getElementById('mob').value,
+    name: document.getElementById('name').value,
+    section: document.getElementById('sec').value,
+    standard: document.getElementById('std').value,
   };
 
   let res = await fetch(url, {
@@ -52,6 +55,8 @@ async function post() {
     },
     body: JSON.stringify(data),
   });
+  resetForm()
+  // getAll()
 }
 
 async function deleteReq() {
@@ -72,7 +77,7 @@ async function deleteData(id) {
   });
 }
 
-function ele() {
-  let gt = document.getElementById(get);
-  let.createElement;
+
+function resetForm() {
+  document.getElementById("form-in").reset();
 }

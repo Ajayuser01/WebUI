@@ -8,15 +8,34 @@
     <title>Document</title>
   </head>
   <body>
+    <form id="form-in">
+      <label for="name">Name</label>
+      <input type="text" name="name" id="name" /><br />
+      <label for="std">Standard</label>
+      <input type="text" name="std" id="std" /><br />
+      <label for="sec">Section</label>
+      <input type="text" name="sec" id="sec" /><br />
+      <label for="mob">Mobile</label>
+      <input type="number" name="mob" id="mob" /><br />
+      <label for="district">District</label>
+      <input type="text" name="district" id="district" /><br />
+      <label for="pin">Pincode</label>
+      <input type="number" name="pin" id="pin" /><br />
+    </form>
     <div id="controls">
       <button id="get" onclick="getAll()">GET</button>
       <button id="post" onclick="post()">POST</button>
+      <button id="post" onclick="">PUT</button>
+      <button id="post" onclick="">PATCH</button>
       <button id="delete" onclick="deleteReq()">DELETE</button>
+      <button id="unique" onclick="getAll()">UNIQUE</button>
+      <input type="number" name="uni" id="uni" /><br />
     </div>
     <br />
     <div id="table-area">
       <table class="tbl">
         <thead>
+          <tr>
             <th><input type="checkbox" id="checkbox" checked /></th>
             <th>id</th>
             <th>Name</th>
