@@ -1,7 +1,7 @@
 body{
     margin: 0%;
     padding: 0%;
-    background-image: url('./Assets/back_04.jpg');
+    background-image: url('../Assets/back_04.jpg');
     background-size: cover;
     background-attachment: fixed;
 }

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <style></style>
+
+    <h2 class="text-center" style="background-color: turquoise">CRUD</h2>
+    <hr />
+    <!-- <div id="inp" class="col-sm-3 col-md-5" style="text-align:center" > -->
+        <div class="col-md-6 offset-md-3">
+      <form id="form-in" >
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text"  class="form-control" name="name" id="name" /><br />
+        </div>
+        <div class="form-group">
+          <label for="std">Standard</label>
+          <input type="text"   class="form-control" name="std" id="std" /><br />
+        </div>
+        <div class="form-group">
+          <label for="sec">Section</label>
+          <input type="text"  class="form-control" name="sec" id="sec" /><br />
+        </div>
+        <div class="form-group">
+          <label for="mob">Mobile</label>
+          <input type="number"  class="form-control" name="mob" id="mob" /><br />
+        </div>
+        <div class="form-group">
+          <label for="district">District</label>
+          <input type="text"  class="form-control" name="district" id="district" /><br />
+        </div>
+        <div class="form-group">
+          <label for="pin">Pincode</label>
+          <input type="number"  class="form-control" name="pin" id="pin" /><br />
+        </div>
+    </form>
+        </div>
+    <!-- </div> -->
+    <div id="btn">
+      <button type="button" class="btn btn-primary">GetAll</button>
+      <button type="button" class="btn btn-secondary">Post</button>
+      <button type="button" class="btn btn-success">Patch</button>
+      <button type="button" class="btn btn-danger">Put</button>
+      <button type="button" class="btn btn-warning">Delete</button>
+      <button type="button" class="btn btn-info">Get Part</button>
+    </div>
+
+    <div id="tbl">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th><input type="checkbox" id="checkbox" checked /></th>
+            <th>id</th>
+            <th>Name</th>
+            <th>Standard</th>
+            <th>Section</th>
+            <th>Mobile</th>
+            <th>District</th>
+            <th>Pincode</th>
+          </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+      </table>
+    </div>
+  </body>
+</html>

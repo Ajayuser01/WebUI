@@ -35,6 +35,28 @@ async function getAll() {
   }
 }
 
+async function getUnique(id){
+  if (id == undefined){
+   id = document.getElementById('uni').value;
+  }
+  let val = await fetch("http://localhost:2022/arithms/students/" +id);
+  // let val = await fetch("http://localhost:2022/arithms/students/5");
+  arrObj = await val.json();
+  const tableBody = document.getElementById("table-body");
+  const tr = document.createElement("tr");
+  const content = `
+      <td><input type='checkbox' name='checkbox' value=${arrObj.id}></td>
+        <td class='id' >${arrObj.id}</td>
+        <td class='name' contenteditable="true">${arrObj.name}</td>
+        <td class='standard' contenteditable="true">${arrObj.standard}</td>
+        <td class='section' contenteditable="true">${arrObj.section}</td>
+        <td class='mobile' contenteditable="true">${arrObj.mobile}</td>
+        <td class='district' contenteditable="true">${arrObj.address.district}</td>
+        <td class='pincode' contenteditable="true">${arrObj.address.pincode}</td>`;
+  tr.innerHTML = content;
+  tableBody.appendChild(tr);
+}
+
 async function post() {
   let url = "http://localhost:2022/arithms/students";
   let data = {
@@ -81,3 +103,30 @@ async function deleteData(id) {
 function resetForm() {
   document.getElementById("form-in").reset();
 }
+
+
+async function put(){
+  let id = document.getElementById('uni').value;
+  let url = "http://localhost:2022/arithms/students/"+id;
+  let data = {
+    address: {
+      district: document.getElementById('district').value,
+      pincode: document.getElementById('pin').value,
+    },
+    mobile: document.getElementById('mob').value,
+    name: document.getElementById('name').value,
+    section: document.getElementById('sec').value,
+    standard: document.getElementById('std').value,
+  };
+
+  let res = await fetch(url, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  });
+  getUnique(id)
+}
+
+

@@ -1,0 +1,52 @@
+body{
+    margin: 0%;
+    padding: 0%;
+    background-image: url('../Assets/back_04.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+table  {
+    width: 30em;
+    height: 3em;
+    border: 2px solid rgb(47, 213, 255);
+    border-radius: 12px;
+    margin-left: 37%;
+    margin-right: 40%;
+    text-align: center;
+}
+
+table td  {
+    height: 1.5em;
+    border: 2px solid rgb(47, 213, 255);
+    border-radius: 12px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+tr{
+    font-size: 1.5em;
+}
+
+ input ,button,p{
+    width: 30em;
+    height: 3em;
+    border-radius: 12px;
+    margin-left: 40%;
+    margin-right: 40%;
+    margin-top: 20px;
+}
+
+input{
+    background-color: rgb(194, 255, 255);
+    border: 0px transparent;
+}
+
+p{
+    height: 10px;
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    margin-left: 30%;
+}
+
